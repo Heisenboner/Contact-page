@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+input
+{
+    margin: 0;
+    
+   
+}
+
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+   background: url(bg-image.svg);
+   background-size: cover;
+    color:#FFFFFF;
+    min-height: 100vh;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight:700;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    
+    
+    
+   
+}
+
+.grid{
+    display: grid;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.grid-container{
+    display:grid;
+   place-items: center;
+    padding-inline:2rem;
+    row-gap:5rem;
+
+  
+}
+
+
+.main-form{
+    display:grid;
+    
+    gap:1rem;
+
+    padding:2rem 2rem 5rem 2rem;
+    background-color:hsl(287,36%,53%);
+    border-radius:16px;
+    margin-bottom:10vh;
+}
+
+input, select, textarea{
+    padding:1.5rem;
+    border-radius: 16px;
+    border:0;
+}
+
+textarea{
+    height:12rem;
+    resize: none;
+}
+
+::placeholder {
+    color:hsl(215,23%,84%);
+font-weight:500;
+
+}
+    
+
+button{
+    padding:1.5rem;
+    border-radius: 16px;
+    border:0;
+    color:hsl(245,52%,44%);
+    font-weight:700;
+    font-size:1.25rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:hsl(245,52%,44%);
+    color:#FFFFFF;
+}
+
+
+
+.input-name{
+    font-size:0.875rem;
+    color: #FAFAFA;
+    margin-bottom:0.25rem;
+}
+
+.main-text{
+    display:grid;
+    gap:1.5rem;
+    text-align: center;
+    max-width:60ch;
+}
+
+.main-text h1{
+    font-size: 4rem;
+    font-weight:700;
+}
+
+.main-text p{
+    font-size:2rem;
+}
+
+header {
+display:grid;
+place-content: start;
+margin: 2rem clamp(2rem, 5vw, 3.5rem);
+}
+
+@media (min-width: 45em) {
+
+    .main-form{
+    grid-template-columns: 23rem 23rem;
+    padding:2rem;}
+
+    .grid-col-span{
+   
+        grid-column: span 2;
+    }
+
+
+}
